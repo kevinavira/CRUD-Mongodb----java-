@@ -1,0 +1,30 @@
+{
+  "name": "json-tabla",
+  "version": "1.0.1",
+  "description": "pasar de json a tabla de html",
+  "main": "json-table.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WEBEXZ/JSON-to-table.git"
+  },
+  "keywords": [
+    "convert",
+    "convertir",
+    "pasar",
+    "pass",
+    "JSON",
+    "HTML",
+    "tabla",
+    "table",
+    "json"
+  ],
+  "author": "Carlos Carrera",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WEBEXZ/JSON-to-table/issues"
+  },
+  "homepage": "https://github.com/WEBEXZ/JSON-to-table#readme"
+}

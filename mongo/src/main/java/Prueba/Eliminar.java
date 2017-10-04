@@ -6,6 +6,7 @@
 package Prueba;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -16,8 +17,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author SOFTWARE2
  */
-@WebServlet(name = "NewServlet", urlPatterns = {"/NewServlet"})
-public class NewServlet extends HttpServlet {
+@WebServlet(name = "Eliminar", urlPatterns = {"/Eliminar"})
+public class Eliminar extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -30,12 +31,11 @@ public class NewServlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        //response.setContentType("text/html;charset=UTF-8");
-       response.setContentType("application/json;charset=utf-8");
-        
-  
-      
-       prueba.get(request.getParameter("tipo"),request.getParameter("nombre"),request.getParameter("newname"),request.getParameter("edad"),request.getParameter("nombre_fichero"),request.getParameter("f1"));
+        response.setContentType("text/html;charset=UTF-8");
+        try (PrintWriter out = response.getWriter()) {
+           prueba.eliminar(request.getParameter("elimarId")); 
+            System.out.println("elimar id : "+request.getParameter("elimarId"));
+        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -50,7 +50,6 @@ public class NewServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-    
         processRequest(request, response);
     }
 
