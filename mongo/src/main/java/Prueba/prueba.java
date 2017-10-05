@@ -144,7 +144,9 @@ public class prueba {
     public static List<String> d() {
         //muestra los datos por pantalla
         List<String> resultados = new ArrayList<>();
+        System.out.println("tablefind"+getTableConexion().find());
         for (Document cur : getTableConexion().find()) {
+            
             resultados.add(cur.toJson());
             //System.out.println("toda la collection" + cur.toJson());
         }
